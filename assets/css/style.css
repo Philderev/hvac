@@ -634,6 +634,14 @@ details .faq-a{padding:0 1.4rem 1.3rem;color:var(--muted);font-size:.97rem;max-w
   .stats-band{grid-template-columns:repeat(2,1fr)}
 }
 @media (max-width:900px){
+  /* backdrop-filter on the header would become the containing block for the
+     fixed full-screen menu, trapping it inside the header bar */
+  body.nav-open{overflow:hidden}
+  body.nav-open .site-header{
+    background:transparent;
+    -webkit-backdrop-filter:none;backdrop-filter:none;
+    transition:none;
+  }
   .nav-links{
     position:fixed;inset:0;z-index:105;
     flex-direction:column;justify-content:center;gap:1.4rem;
