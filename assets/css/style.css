@@ -500,8 +500,7 @@ details .faq-a{padding:0 1.4rem 1.3rem;color:var(--muted);font-size:.97rem;max-w
 .home-quote-form{padding:1.25rem;border:1px solid var(--line-soft);border-radius:18px;background:rgba(5,8,14,.68)}
 .home-quote-form .field input,.home-quote-form .field select,.home-quote-form .field textarea{background:rgba(10,16,28,.82)}
 .home-quote-form .field textarea{min-height:88px}
-.home-quote-submit{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1rem}
-.home-quote-submit p{max-width:34ch;color:var(--muted);font-size:.7rem;line-height:1.45}
+.home-quote-submit{display:flex;align-items:center;justify-content:flex-end;gap:1rem;margin-top:1rem}
 .home-quote-submit .btn{flex:0 0 auto}
 
 /* ---------- CTA band ---------- */
@@ -544,6 +543,7 @@ details .faq-a{padding:0 1.4rem 1.3rem;color:var(--muted);font-size:.97rem;max-w
 .form-legal-links a{color:var(--cyan)}
 .form-legal-links a:hover{text-decoration:underline;text-underline-offset:3px}
 .form-legal-links span{margin:0 .5rem;opacity:.45}
+.form-submit-center{display:flex;justify-content:center;margin-top:1.4rem}
 .form-success{
   display:none;padding:1.2rem 1.4rem;border-radius:14px;margin-top:1.2rem;
   border:1px solid rgba(56,255,176,.35);background:rgba(56,255,176,.08);color:#8fffd0;font-weight:600;
