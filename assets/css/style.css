@@ -514,6 +514,21 @@ details[open] summary .plus::before,details[open] summary .plus::after{backgroun
 details[open] summary .plus::after{transform:rotate(90deg)}
 details .faq-a{padding:0 1.4rem 1.3rem;color:var(--muted);font-size:.97rem;max-width:70ch}
 
+/* ---------- home quote ---------- */
+.home-quote{padding-top:0}
+.home-quote-shell{position:relative;display:grid;grid-template-columns:.85fr 1.35fr;gap:clamp(2rem,5vw,4rem);padding:clamp(1.7rem,4vw,3.2rem);overflow:hidden;border:1px solid var(--line);border-radius:calc(var(--radius) + 6px);background:linear-gradient(125deg,rgba(56,225,255,.09),rgba(8,13,23,.96) 42%,rgba(76,125,255,.07))}
+.home-quote-shell::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.45;background:linear-gradient(rgba(56,225,255,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(56,225,255,.05) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(90deg,#000,transparent 65%)}
+.home-quote-intro,.home-quote-form{position:relative}
+.home-quote-intro .lead{margin-top:1rem;font-size:.98rem}
+.home-quote-meta{display:flex;flex-wrap:wrap;gap:1rem;margin-top:1.7rem;padding-top:1.2rem;border-top:1px solid var(--line-soft);color:var(--muted);font-size:.78rem;text-transform:uppercase;letter-spacing:.06em}
+.home-quote-meta b{display:block;margin-bottom:.15rem;color:var(--cyan);font-size:1rem}
+.home-quote-form{padding:1.25rem;border:1px solid var(--line-soft);border-radius:18px;background:rgba(5,8,14,.68)}
+.home-quote-form .field input,.home-quote-form .field select,.home-quote-form .field textarea{background:rgba(10,16,28,.82)}
+.home-quote-form .field textarea{min-height:88px}
+.home-quote-submit{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-top:1rem}
+.home-quote-submit p{max-width:34ch;color:var(--muted);font-size:.7rem;line-height:1.45}
+.home-quote-submit .btn{flex:0 0 auto}
+
 /* ---------- CTA band ---------- */
 .cta-band{
   border-radius:calc(var(--radius) + 6px);padding:clamp(2.5rem,6vw,4.5rem);
@@ -703,6 +718,7 @@ details .faq-a{padding:0 1.4rem 1.3rem;color:var(--muted);font-size:.97rem;max-w
   .nav-toggle{display:block;margin-left:auto}
   .nav-cta{display:none}
   .about-grid,.faq-grid{grid-template-columns:1fr}
+  .home-quote-shell{grid-template-columns:1fr}
   .proj-grid,.grid-2{grid-template-columns:1fr}
   .chip-tr{right:.6rem}.chip-bl{left:.6rem}
 }
@@ -714,6 +730,8 @@ details .faq-a{padding:0 1.4rem 1.3rem;color:var(--muted);font-size:.97rem;max-w
   .step{grid-template-columns:auto 1fr}
   .step-arrow{display:none}
   .form-grid{grid-template-columns:1fr}
+  .home-quote-submit{align-items:stretch;flex-direction:column}
+  .home-quote-submit .btn{justify-content:center}
   .section-head .lead{border-left:0;padding-left:0}
   .contact-console{right:1rem;bottom:1rem}
   .contact-console-toggle{width:58px;padding:0}
