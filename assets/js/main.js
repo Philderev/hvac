@@ -173,17 +173,16 @@
     });
   }
 
-  /* ---------- demo lead form ---------- */
+  /* ---------- demo lead form → thank-you page ---------- */
   d.querySelectorAll("form[data-demo]").forEach(function (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      var ok = form.querySelector(".form-success");
-      if (ok) {
-        ok.classList.add("show");
-        ok.setAttribute("tabindex", "-1");
-        ok.focus();
-      }
-      form.querySelectorAll("input,select,textarea,button").forEach(function (el) { el.disabled = true; });
+      form.querySelectorAll("button[type=submit]").forEach(function (b) {
+        b.disabled = true;
+        b.textContent = "Sending…";
+      });
+      var dest = form.getAttribute("data-thankyou") || form.getAttribute("action") || "thank-you.html";
+      w.location.assign(dest);
     });
   });
 

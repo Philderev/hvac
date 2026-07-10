@@ -105,7 +105,6 @@ h1,h2,h3,h4{font-weight:700;line-height:1.02;text-wrap:balance}
   padding:.45rem 1rem;margin-bottom:1.4rem;
   background:rgba(56,225,255,.05);
 }
-.kicker::before{content:"";width:7px;height:7px;background:var(--grad);transform:rotate(45deg);flex-shrink:0}
 
 .section-head{margin-bottom:clamp(2.2rem,5vw,3.6rem)}
 .section-head.split{display:flex;flex-wrap:wrap;gap:1.5rem;align-items:flex-end;justify-content:space-between}
@@ -658,6 +657,40 @@ details .faq-a{padding:0 1.4rem 1.3rem;color:var(--muted);font-size:.97rem;max-w
 .crumbs span[aria-current]{color:var(--ink)}
 
 .svc-hero-img img{border-radius:var(--radius);aspect-ratio:16/7;object-fit:cover;object-position:50% 30%;width:100%}
+
+/* ---------- thank-you page ---------- */
+.ty-badge{
+  width:88px;height:88px;margin:0 auto;border-radius:50%;
+  display:grid;place-items:center;color:#04121a;
+  background:linear-gradient(135deg,#38ffb0,#2ed3f2);
+  box-shadow:0 0 0 10px rgba(56,255,176,.1),0 18px 44px rgba(46,211,242,.35);
+  animation:ty-pop .55s var(--ease) both;
+}
+.ty-badge svg{width:42px;height:42px;stroke-dasharray:40;stroke-dashoffset:40;animation:ty-check .5s .35s var(--ease) forwards}
+@keyframes ty-pop{0%{transform:scale(.5);opacity:0}60%{transform:scale(1.08)}100%{transform:scale(1);opacity:1}}
+@keyframes ty-check{to{stroke-dashoffset:0}}
+.ty-steps{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;
+  margin:2.6rem 0 2.4rem;text-align:left;
+}
+.ty-step{
+  display:flex;gap:.9rem;align-items:flex-start;
+  background:var(--card);border:1px solid var(--line-soft);border-radius:16px;padding:1.2rem;
+}
+.ty-step-num{
+  flex-shrink:0;width:32px;height:32px;border-radius:10px;display:grid;place-items:center;
+  font-weight:700;color:#04121a;background:var(--grad);
+}
+.ty-step b{display:block;font-size:1rem;margin-bottom:.2rem}
+.ty-step span{font-size:.9rem;color:var(--muted);line-height:1.45}
+.ty-actions{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+@media (prefers-reduced-motion:reduce){
+  .ty-badge{animation:none}
+  .ty-badge svg{animation:none;stroke-dashoffset:0}
+}
+@media (max-width:760px){
+  .ty-steps{grid-template-columns:1fr}
+}
 
 .prose{max-width:70ch;color:var(--muted)}
 .prose h2{font-size:1.6rem;text-transform:uppercase;color:var(--ink);margin:2.4rem 0 .8rem}
