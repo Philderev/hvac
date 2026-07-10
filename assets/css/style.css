@@ -585,6 +585,50 @@ details .faq-a{padding:0 1.4rem 1.3rem;color:var(--muted);font-size:.97rem;max-w
 .footer-bottom a:hover{color:var(--cyan)}
 .footer-legal{display:flex;gap:1.6rem;flex-wrap:wrap}
 
+/* ---------- floating contact console ---------- */
+.contact-console{position:fixed;right:clamp(1rem,3vw,2rem);bottom:clamp(1rem,3vw,2rem);z-index:120;display:grid;justify-items:end;gap:.8rem;font-family:inherit}
+.contact-console-panel{width:min(390px,calc(100vw - 2rem));overflow:hidden;border:1px solid rgba(56,225,255,.25);border-radius:22px;background:rgba(8,13,23,.96);box-shadow:0 28px 80px rgba(0,0,0,.52),0 0 40px rgba(56,225,255,.08);transform:translateY(16px) scale(.97);transform-origin:bottom right;opacity:0;visibility:hidden;transition:opacity .25s var(--ease),transform .25s var(--ease),visibility .25s;-webkit-backdrop-filter:blur(18px);backdrop-filter:blur(18px)}
+.contact-console.is-open .contact-console-panel{transform:none;opacity:1;visibility:visible}
+.contact-console-head{position:relative;display:flex;gap:1rem;padding:1.35rem 1.35rem 1.2rem;background:radial-gradient(circle at 100% 0,rgba(76,125,255,.24),transparent 50%),linear-gradient(135deg,rgba(56,225,255,.1),transparent 62%);border-bottom:1px solid var(--line-soft)}
+.contact-console-head::after{content:"";position:absolute;right:1.25rem;top:1.25rem;width:42px;height:42px;border-top:1px solid rgba(56,225,255,.22);border-right:1px solid rgba(56,225,255,.22)}
+.contact-console-mark{width:44px;height:44px;flex:0 0 auto;display:grid;place-items:center;border-radius:14px;background:rgba(56,225,255,.08);border:1px solid rgba(56,225,255,.3);color:var(--cyan)}
+.contact-console-mark svg{width:25px;height:25px}
+.contact-console-eyebrow{display:flex;align-items:center;gap:.4rem;margin-bottom:.35rem;color:#8fffd0;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
+.contact-console-eyebrow i{width:6px;height:6px;border-radius:50%;background:#56f2ad;box-shadow:0 0 10px #56f2ad}
+.contact-console-head h2{font-size:1.15rem;line-height:1.2;text-transform:uppercase;letter-spacing:.02em}
+.contact-console-head p{margin-top:.3rem;color:var(--muted);font-size:.82rem}
+.contact-console-actions{display:grid;gap:.55rem;padding:.85rem}
+.contact-console-actions a{display:grid;grid-template-columns:42px 1fr auto;align-items:center;gap:.8rem;padding:.75rem;border:1px solid var(--line-soft);border-radius:14px;background:rgba(255,255,255,.025);transition:border-color .25s,background .25s,transform .25s var(--ease)}
+.contact-console-actions a:hover{border-color:rgba(56,225,255,.42);background:rgba(56,225,255,.06);transform:translateX(-3px)}
+.contact-action-icon{width:42px;height:42px;display:grid;place-items:center;border-radius:12px;background:linear-gradient(135deg,rgba(56,225,255,.16),rgba(76,125,255,.12));color:var(--cyan)}
+.contact-action-icon svg{width:19px;height:19px}
+.contact-console-actions strong,.contact-console-actions small{display:block}
+.contact-console-actions strong{font-size:.88rem}
+.contact-console-actions small{margin-top:.2rem;color:var(--muted);font-size:.7rem}
+.contact-arrow{color:var(--muted);font-size:1rem;transition:color .25s,transform .25s}
+.contact-console-actions a:hover .contact-arrow{color:var(--cyan);transform:translate(2px,-2px)}
+.contact-console-toggle{min-width:58px;height:58px;display:flex;align-items:center;justify-content:center;gap:.75rem;padding:0 1.1rem;border:1px solid rgba(56,225,255,.45);border-radius:18px;background:linear-gradient(135deg,#38e1ff,#4c7dff);box-shadow:0 14px 35px rgba(14,88,160,.35);color:#04121a;font:inherit;font-size:.82rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:transform .25s var(--ease),box-shadow .25s}
+.contact-console-toggle:hover{transform:translateY(-3px);box-shadow:0 18px 42px rgba(14,88,160,.48)}
+.contact-toggle-icon{width:24px;height:24px;display:grid;place-items:center}
+.contact-toggle-icon svg{grid-area:1/1;width:24px;height:24px;transition:opacity .2s,transform .25s var(--ease)}
+.contact-icon-close{opacity:0;transform:rotate(-45deg) scale(.7)}
+.contact-console.is-open .contact-icon-chat{opacity:0;transform:rotate(45deg) scale(.7)}
+.contact-console.is-open .contact-icon-close{opacity:1;transform:none}
+
+/* ---------- cookie consent ---------- */
+.cookie-banner{position:fixed;left:clamp(1rem,3vw,2rem);bottom:clamp(1rem,3vw,2rem);z-index:130;display:flex;align-items:flex-end;gap:1rem;width:min(520px,calc(100vw - 2rem));padding:1rem 1.05rem;border:1px solid rgba(56,225,255,.25);border-radius:17px;background:rgba(8,13,23,.97);box-shadow:0 24px 80px rgba(0,0,0,.58),0 0 40px rgba(56,225,255,.07);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px);opacity:0;transform:translateY(calc(100% + 3rem));transition:opacity .35s var(--ease),transform .35s var(--ease)}
+.cookie-banner.is-visible{opacity:1;transform:none}
+.cookie-copy{max-width:100%}
+.cookie-kicker{display:block;margin-bottom:.18rem;color:var(--cyan);font-size:.6rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
+.cookie-copy h2{font-size:.9rem;line-height:1.25;text-transform:uppercase;letter-spacing:.01em}
+.cookie-copy p{margin-top:.25rem;color:var(--muted);font-size:.73rem;line-height:1.45}
+.cookie-copy a{color:var(--cyan);text-decoration:underline;text-underline-offset:3px}
+.cookie-actions{display:flex;flex:0 0 auto;white-space:nowrap}
+.cookie-actions button{min-height:38px;padding:.6rem .9rem;border-radius:11px;font:inherit;font-size:.68rem;font-weight:750;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;transition:transform .2s var(--ease),border-color .2s,background .2s}
+.cookie-actions button:hover{transform:translateY(-2px)}
+.cookie-accept{border:1px solid transparent;background:var(--grad);color:#04121a}
+.cookie-actions button:focus-visible{outline:2px solid var(--cyan);outline-offset:3px}
+
 /* ---------- page hero (subpages) ---------- */
 .page-hero{
   padding:11rem 0 5rem;position:relative;overflow:hidden;
@@ -671,6 +715,12 @@ details .faq-a{padding:0 1.4rem 1.3rem;color:var(--muted);font-size:.97rem;max-w
   .step-arrow{display:none}
   .form-grid{grid-template-columns:1fr}
   .section-head .lead{border-left:0;padding-left:0}
+  .contact-console{right:1rem;bottom:1rem}
+  .contact-console-toggle{width:58px;padding:0}
+  .contact-toggle-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+  .cookie-banner{left:1rem;bottom:1rem;display:grid;padding:1rem;gap:.7rem}
+  .cookie-actions{justify-content:flex-end}
+  .cookie-actions button{width:100%}
 }
 
 /* ---------- motion preferences ---------- */

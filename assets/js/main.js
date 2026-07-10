@@ -187,6 +187,69 @@
     });
   });
 
+  /* ---------- floating contact console ---------- */
+  var contactWidget = d.createElement("aside");
+  contactWidget.className = "contact-console";
+  contactWidget.innerHTML =
+    '<div class="contact-console-panel" id="contact-console-panel" aria-hidden="true">' +
+      '<div class="contact-console-head">' +
+        '<span class="contact-console-mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><defs><linearGradient id="contactLogoHex" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#38E1FF"/><stop offset=".55" stop-color="#4C7DFF"/><stop offset="1" stop-color="#FF8A3D"/></linearGradient><linearGradient id="contactLogoCold" x1="18" y1="20" x2="32" y2="46" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7BEBFF"/><stop offset="1" stop-color="#38E1FF"/></linearGradient><linearGradient id="contactLogoWarm" x1="46" y1="20" x2="32" y2="46" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFB067"/><stop offset="1" stop-color="#FF8A3D"/></linearGradient></defs><path d="M32 3.4 55.5 17v27L32 57.6 8.5 44V17Z" stroke="url(#contactLogoHex)" stroke-width="3.2" stroke-linejoin="round"/><path d="M19.5 21.5 32 45" stroke="url(#contactLogoCold)" stroke-width="5" stroke-linecap="round"/><path d="M44.5 21.5 32 45" stroke="url(#contactLogoWarm)" stroke-width="5" stroke-linecap="round"/><path d="M32 12.2l1.7 4.1 4.1 1.7-4.1 1.7-1.7 4.1-1.7-4.1-4.1-1.7 4.1-1.7Z" fill="#EAF2FF"/></svg></span>' +
+        '<div><span class="contact-console-eyebrow"><i></i> Dispatch online</span><h2>Need a climate fix?</h2><p>Talk directly with our Las Vegas crew.</p></div>' +
+      '</div>' +
+      '<div class="contact-console-actions">' +
+        '<a href="tel:+17025550148"><span class="contact-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><span><strong>Call dispatch</strong><small>(702) 555-0148</small></span><span class="contact-arrow" aria-hidden="true">&#8599;</span></a>' +
+        '<a href="sms:+17025550148"><span class="contact-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 5h14v11H9l-4 3V5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 9h6M9 12h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><strong>Send a text</strong><small>Fastest for quick questions</small></span><span class="contact-arrow" aria-hidden="true">&#8599;</span></a>' +
+        '<a href="mailto:hello@vegaclimate.com"><span class="contact-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M4 6h16v12H4V6Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="m5 7 7 6 7-6" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><span><strong>Email the crew</strong><small>hello@vegaclimate.com</small></span><span class="contact-arrow" aria-hidden="true">&#8599;</span></a>' +
+      '</div>' +
+    '</div>' +
+    '<button class="contact-console-toggle" type="button" aria-expanded="false" aria-controls="contact-console-panel"><span class="contact-toggle-label">Contact crew</span><span class="contact-toggle-icon" aria-hidden="true"><svg class="contact-icon-chat" viewBox="0 0 24 24" fill="none"><path d="M4 5h16v11H9l-5 4V5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M8 9h8M8 12h5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><svg class="contact-icon-close" viewBox="0 0 24 24" fill="none"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span></button>';
+  d.body.appendChild(contactWidget);
+
+  var contactToggle = contactWidget.querySelector(".contact-console-toggle");
+  var contactPanel = contactWidget.querySelector(".contact-console-panel");
+  contactToggle.addEventListener("click", function () {
+    var open = contactWidget.classList.toggle("is-open");
+    contactToggle.setAttribute("aria-expanded", open ? "true" : "false");
+    contactPanel.setAttribute("aria-hidden", open ? "false" : "true");
+  });
+  d.addEventListener("keydown", function (e) {
+    if (e.key === "Escape" && contactWidget.classList.contains("is-open")) {
+      contactWidget.classList.remove("is-open");
+      contactToggle.setAttribute("aria-expanded", "false");
+      contactPanel.setAttribute("aria-hidden", "true");
+      contactToggle.focus();
+    }
+  });
+
+  /* ---------- cookie consent ---------- */
+  var cookieChoice = null;
+  try { cookieChoice = w.localStorage.getItem("vega-cookie-consent"); } catch (err) {}
+  if (!cookieChoice) {
+    var privacyHref = w.location.pathname.indexOf("/services/") !== -1 ? "../privacy.html" : "privacy.html";
+    var cookieBanner = d.createElement("section");
+    cookieBanner.className = "cookie-banner";
+    cookieBanner.setAttribute("aria-label", "Cookie preferences");
+    cookieBanner.setAttribute("role", "region");
+    cookieBanner.innerHTML =
+      '<div class="cookie-copy"><span class="cookie-kicker">A quick privacy note</span><h2>Cookies keep things running smoothly.</h2><p>We use cookies to understand site performance and improve your experience. Learn more in our <a href="' + privacyHref + '">privacy policy</a>.</p></div>' +
+      '<div class="cookie-actions"><button class="cookie-accept" type="button" data-cookie-choice="acknowledged">Got it</button></div>';
+    d.body.appendChild(cookieBanner);
+    w.requestAnimationFrame(function () { cookieBanner.classList.add("is-visible"); });
+
+    cookieBanner.querySelectorAll("[data-cookie-choice]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        var choice = btn.dataset.cookieChoice;
+        try { w.localStorage.setItem("vega-cookie-consent", choice); } catch (err) {}
+        d.documentElement.dataset.cookieConsent = choice;
+        cookieBanner.classList.remove("is-visible");
+        cookieBanner.addEventListener("transitionend", function () { cookieBanner.remove(); }, { once: true });
+        w.setTimeout(function () { if (cookieBanner.isConnected) cookieBanner.remove(); }, 500);
+      });
+    });
+  } else {
+    d.documentElement.dataset.cookieConsent = cookieChoice;
+  }
+
   /* ---------- current year ---------- */
   d.querySelectorAll("[data-year]").forEach(function (el) {
     el.textContent = new Date().getFullYear();
