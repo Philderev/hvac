@@ -568,12 +568,17 @@
           <div class="form-grid">
             <div class="field"><label for="hq-name">Your name</label><input id="hq-name" name="name" type="text" autocomplete="name" required placeholder="Jordan Alvarez"></div>
             <div class="field"><label for="hq-phone">Phone number</label><input id="hq-phone" name="phone" type="tel" autocomplete="tel" required placeholder="(702) 555-0123"></div>
-            <div class="field"><label for="hq-service">How can we help?</label>
+            <div class="field"><label for="hq-service">Service needed</label>
               <select id="hq-service" name="service">
-                <option>AC repair</option><option>New AC installation</option><option>Heating service</option><option>Maintenance</option><option>Air quality &amp; ducts</option><option>Not sure yet</option>
+                <option>Emergency AC repair</option><option>AC installation / replacement</option><option>Heating &amp; furnace</option><option>Preventive maintenance</option><option>Air quality &amp; ducts</option><option>Smart climate automation</option><option>Something else</option>
               </select>
             </div>
             <div class="field"><label for="hq-zip">ZIP code</label><input id="hq-zip" name="zip" inputmode="numeric" autocomplete="postal-code" placeholder="89103"></div>
+            <div class="field full"><label for="hq-when">When?</label>
+              <select id="hq-when" name="urgency">
+                <option>As soon as possible</option><option>Within a few days</option><option>Planning ahead</option>
+              </select>
+            </div>
             <div class="field full"><label for="hq-message">What are you noticing?</label><textarea id="hq-message" name="message" rows="3" placeholder="For example: warm air, unusual noise, or a system that won't start…"></textarea></div>
           </div>
           <div class="home-quote-submit">
