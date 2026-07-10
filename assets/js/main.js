@@ -177,6 +177,7 @@
   d.querySelectorAll("form[data-demo]").forEach(function (form) {
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+      if (form.reportValidity && !form.reportValidity()) return;
       form.querySelectorAll("button[type=submit]").forEach(function (b) {
         b.disabled = true;
         b.textContent = "Sending…";

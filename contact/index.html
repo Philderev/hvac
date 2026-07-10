@@ -103,9 +103,14 @@
             </div>
             <div class="field full"><label for="f-msg">What's going on?</label><textarea id="f-msg" name="message" placeholder="AC blows warm air upstairs; unit is about 8 years old…"></textarea></div>
           </div>
+          <label class="consent">
+            <input type="checkbox" name="sms_consent" required>
+            <span>I consent to receive SMS notifications, alerts &amp; occasional marketing communication from Vega Climate. Message frequency varies. Message &amp; data rates may apply. Reply STOP to unsubscribe at any time.</span>
+          </label>
           <button class="btn btn-primary" type="submit" style="margin-top:1.4rem">Send request
             <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
           </button>
+          <p class="form-legal-links"><a href="../privacy/">Privacy Policy</a> <span aria-hidden="true">|</span> <a href="../terms/">Terms of Service</a></p>
           <p class="form-success" role="status">✓ Request received! A dispatcher will text your confirmation shortly. (Demo site — form submissions are simulated.)</p>
           <p class="form-note">By submitting you agree to be contacted about your request. We never sell your data — or share it with anyone who isn't fixing your AC.</p>
         </form>
