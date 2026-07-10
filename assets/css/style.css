@@ -127,7 +127,7 @@ h1,h2,h3,h4{font-weight:700;line-height:1.02;text-wrap:balance}
   background:rgba(56,225,255,.04);
   color:var(--ink);
 }
-.btn-ghost:hover{transform:translateY(-2px);background:rgba(56,225,255,.1)}
+.btn-ghost:hover{transform:translateY(-2px);background:rgba(56,225,255,.1);border-color:var(--cyan)}
 .btn-amber{
   background:linear-gradient(135deg,#ffa14a,#ff7a2e);
   color:#1a0c04;
@@ -299,7 +299,7 @@ h1,h2,h3,h4{font-weight:700;line-height:1.02;text-wrap:balance}
   transition:transform .45s var(--ease),box-shadow .45s var(--ease),border-color .45s;
   overflow:hidden;
 }
-.card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(0,0,0,.45);border-color:var(--line)}
+.card:hover{transform:translateY(-6px);box-shadow:0 24px 50px rgba(0,0,0,.45);border-color:rgba(56,225,255,.45)}
 
 .svc-card .svc-ico{
   width:54px;height:54px;border-radius:14px;margin-bottom:1.3rem;
@@ -409,7 +409,7 @@ h1,h2,h3,h4{font-weight:700;line-height:1.02;text-wrap:balance}
   background:var(--card);display:flex;align-items:center;gap:.7rem;
   font-weight:600;transition:.3s var(--ease);
 }
-.area:hover{border-color:var(--line);transform:translateY(-3px);color:var(--cyan)}
+.area:hover{border-color:rgba(56,225,255,.45);transform:translateY(-3px);color:var(--cyan)}
 .area svg{width:16px;height:16px;color:var(--cyan);flex-shrink:0}
 
 /* ---------- pricing ---------- */
@@ -584,8 +584,6 @@ details .faq-a{padding:0 1.4rem 1.3rem;color:var(--muted);font-size:.97rem;max-w
 .contact-console-head::after{content:"";position:absolute;right:1.25rem;top:1.25rem;width:42px;height:42px;border-top:1px solid rgba(56,225,255,.22);border-right:1px solid rgba(56,225,255,.22)}
 .contact-console-mark{width:44px;height:44px;flex:0 0 auto;display:grid;place-items:center;border-radius:14px;background:rgba(56,225,255,.08);border:1px solid rgba(56,225,255,.3);color:var(--cyan)}
 .contact-console-mark svg{width:25px;height:25px}
-.contact-console-eyebrow{display:flex;align-items:center;gap:.4rem;margin-bottom:.35rem;color:#8fffd0;font-size:.68rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase}
-.contact-console-eyebrow i{width:6px;height:6px;border-radius:50%;background:#56f2ad}
 .contact-console-head h2{font-size:1.15rem;line-height:1.2;text-transform:uppercase;letter-spacing:.02em}
 .contact-console-head p{margin-top:.3rem;color:var(--muted);font-size:.82rem}
 .contact-console-actions{display:grid;gap:.55rem;padding:.85rem}
@@ -599,7 +597,7 @@ details .faq-a{padding:0 1.4rem 1.3rem;color:var(--muted);font-size:.97rem;max-w
 .contact-arrow{color:var(--muted);font-size:1rem;transition:color .25s,transform .25s}
 .contact-console-actions a:hover .contact-arrow{color:var(--cyan);transform:translate(2px,-2px)}
 .contact-console-toggle{min-width:58px;height:58px;display:flex;align-items:center;justify-content:center;gap:.75rem;padding:0 1.1rem;border:1px solid rgba(56,225,255,.45);border-radius:18px;background:linear-gradient(135deg,#38e1ff,#4c7dff);color:#04121a;font:inherit;font-size:.82rem;font-weight:800;letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:transform .25s var(--ease)}
-.contact-console-toggle:hover{transform:translateY(-3px)}
+.contact-console-toggle:hover{transform:translateY(-3px);border-color:var(--cyan)}
 .contact-toggle-icon{width:24px;height:24px;display:grid;place-items:center}
 .contact-toggle-icon svg{grid-area:1/1;width:24px;height:24px;transition:opacity .2s,transform .25s var(--ease)}
 .contact-icon-close{opacity:0;transform:rotate(-45deg) scale(.7)}
