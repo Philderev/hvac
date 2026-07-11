@@ -333,13 +333,15 @@ html.announce-closed .announce-bar{visibility:hidden}
 /* ---------- trust marquee ---------- */
 .trust{padding:1.8rem 0;border-block:1px solid var(--line-soft);background:var(--bg-1);overflow:hidden}
 .trust::before,.trust::after{
-  content:"";position:absolute;top:0;bottom:0;width:80px;z-index:2;pointer-events:none;
+  content:"";position:absolute;top:0;bottom:0;
+  width:calc((100vw - min(1180px,92vw)) / 2);
+  z-index:2;pointer-events:none;
 }
 .trust::before{left:0;background:linear-gradient(90deg,var(--bg-1),transparent)}
 .trust::after{right:0;background:linear-gradient(270deg,var(--bg-1),transparent)}
-.marquee{display:flex;gap:clamp(2rem,5vw,4.5rem);align-items:center;width:max-content;animation:marquee 28s linear infinite}
+.marquee{display:flex;align-items:center;width:max-content;animation:marquee 28s linear infinite}
 .trust:hover .marquee{animation-play-state:paused}
-.marquee-item{display:flex;align-items:center;white-space:nowrap}
+.marquee-item{display:flex;align-items:center;white-space:nowrap;margin-right:clamp(2rem,5vw,4.5rem)}
 .marquee-item img{height:32px;width:auto;opacity:.92;transition:opacity .3s,transform .3s var(--ease)}
 .marquee-item img:hover{opacity:1;transform:translateY(-2px)}
 @keyframes marquee{to{transform:translateX(-50%)}}
