@@ -590,7 +590,7 @@ details .faq-a{padding:0 1.4rem 1.3rem;color:var(--muted);font-size:.97rem;max-w
 
 /* ---------- home quote ---------- */
 .home-quote{padding-top:0}
-.home-quote-shell{position:relative;display:grid;grid-template-columns:.85fr 1.35fr;gap:clamp(2rem,5vw,4rem);padding:clamp(1.7rem,4vw,3.2rem);overflow:hidden;border:1px solid var(--line);border-radius:calc(var(--radius) + 6px);background:linear-gradient(125deg,rgba(210,231,255,.6),#ffffff 42%,rgba(167,201,232,.4))}
+.home-quote-shell{position:relative;display:grid;grid-template-columns:.85fr 1.35fr;gap:clamp(2rem,5vw,4rem);padding:clamp(1.7rem,4vw,3.2rem);overflow:hidden;border:1px solid var(--line);border-radius:calc(var(--radius) + 6px);background:linear-gradient(125deg,rgba(167,201,232,.82),#e7edf3 42%,rgba(86,114,143,.42))}
 .home-quote-shell::before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.5;background:linear-gradient(rgba(47,63,82,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(47,63,82,.05) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(90deg,#000,transparent 65%)}
 .home-quote-intro,.home-quote-form{position:relative}
 .home-quote-intro .lead{margin-top:1rem;font-size:.98rem}
@@ -599,8 +599,10 @@ details .faq-a{padding:0 1.4rem 1.3rem;color:var(--muted);font-size:.97rem;max-w
 .home-quote-form{padding:1.25rem;border:1px solid var(--line-soft);border-radius:18px;background:rgba(255,255,255,.7)}
 .home-quote-form .field input,.home-quote-form .field select,.home-quote-form .field textarea{background:#ffffff}
 .home-quote-form .field textarea{min-height:88px}
-.home-quote-submit{display:flex;align-items:center;justify-content:flex-end;gap:1rem;margin-top:1rem}
+.home-quote-submit{display:flex;align-items:center;justify-content:center;gap:1rem;margin-top:1rem}
 .home-quote-submit .btn{flex:0 0 auto}
+
+.contact-quote-shell{padding:clamp(1.7rem,4vw,3.2rem);border:1px solid var(--line);border-radius:calc(var(--radius) + 6px);background:linear-gradient(125deg,rgba(167,201,232,.82),#e7edf3 42%,rgba(86,114,143,.42))}
 
 /* ---------- CTA band ---------- */
 .cta-band{
