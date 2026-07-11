@@ -7,7 +7,9 @@
 <meta name="description" content="The page you requested could not be found. Return to Vega Climate, Las Vegas HVAC.">
 <meta name="robots" content="noindex">
 <meta name="theme-color" content="#05070d">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="assets/icons/favicon-16.png" type="image/png" sizes="16x16">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <meta property="og:type" content="website">
@@ -16,18 +18,32 @@
 <meta property="og:description" content="The page you requested could not be found. Return to Vega Climate, Las Vegas HVAC.">
 <meta property="og:image" content="https://philderev.github.io/hvac/assets/img/og.jpg?v=2">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preload" href="assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="assets/css/style.css">
 
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
+<div class="announce-bar" role="region" aria-label="Current promotions">
+  <div class="announce-inner">
+    <div class="announce-track" aria-live="polite">
+      <p class="announce-msg is-active"><strong>Summer Special</strong> — $89 AC tune-up (reg. $149), book by July 31</p>
+      <p class="announce-msg">New customers save 15% on any repair this month</p>
+      <p class="announce-msg">0% APR financing available on new system installs</p>
+    </div>
+    <a class="announce-cta" href="contact/">Claim offer</a>
+    <button class="announce-close" type="button" aria-label="Dismiss announcement">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</div>
+
 <header class="site-header">
   <div class="wrap nav">
     <a class="brand" href="./">
-      <svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><defs><linearGradient id="lgx" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#38E1FF"/><stop offset=".55" stop-color="#4C7DFF"/><stop offset="1" stop-color="#FF8A3D"/></linearGradient></defs><path d="M32 3.4 55.5 17v27L32 57.6 8.5 44V17Z" stroke="url(#lgx)" stroke-width="3.2" stroke-linejoin="round"/><path d="M19.5 21.5 32 45" stroke="#38E1FF" stroke-width="5" stroke-linecap="round"/><path d="M44.5 21.5 32 45" stroke="#FF8A3D" stroke-width="5" stroke-linecap="round"/><path d="M32 12.2l1.7 4.1 4.1 1.7-4.1 1.7-1.7 4.1-1.7-4.1-4.1-1.7 4.1-1.7Z" fill="#EAF2FF"/></svg>
-      <span class="brand-name">VEGA<small>Climate · LV</small></span>
+      <img src="assets/icons/vega.png" alt="Vega Climate" class="brand-logo">
+
     </a>
     <nav aria-label="Main navigation" style="display:contents">
       <ul class="nav-links">
@@ -82,8 +98,8 @@
     <div class="footer-grid">
       <div class="footer-about">
         <a class="brand" href="./">
-          <svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><defs><linearGradient id="lgf" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#38E1FF"/><stop offset=".55" stop-color="#4C7DFF"/><stop offset="1" stop-color="#FF8A3D"/></linearGradient></defs><path d="M32 3.4 55.5 17v27L32 57.6 8.5 44V17Z" stroke="url(#lgf)" stroke-width="3.2" stroke-linejoin="round"/><path d="M19.5 21.5 32 45" stroke="#38E1FF" stroke-width="5" stroke-linecap="round"/><path d="M44.5 21.5 32 45" stroke="#FF8A3D" stroke-width="5" stroke-linecap="round"/><path d="M32 12.2l1.7 4.1 4.1 1.7-4.1 1.7-1.7 4.1-1.7-4.1-4.1-1.7 4.1-1.7Z" fill="#EAF2FF"/></svg>
-          <span class="brand-name">VEGA<small>Climate · LV</small></span>
+          <img src="assets/icons/vega.png" alt="Vega Climate" class="brand-logo">
+
         </a>
         <p>Futuristic HVAC for the Las Vegas valley. Licensed, bonded and insured — NV #C21-0087421.</p>
         <div class="socials">
@@ -125,7 +141,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span data-year>2026</span> Vega Climate Systems LLC. All rights reserved. Fictional demo business.</span>
+      <span>© <span data-year>2026</span> Vega Climate Systems LLC. All rights reserved.</span>
       <nav class="footer-legal" aria-label="Legal"><a href="privacy/">Privacy Policy</a><a href="terms/">Terms of Service</a></nav>
     </div>
   </div>

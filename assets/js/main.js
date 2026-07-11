@@ -4,6 +4,33 @@
   var d = document, w = window;
   var reduceMotion = w.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
+  /* ---------- announcement bar ---------- */
+  var announceBar = d.querySelector(".announce-bar");
+  if (announceBar) {
+    var announceDismissed = false;
+    try { announceDismissed = w.localStorage.getItem("vega-announce-dismissed") === "1"; } catch (err) {}
+    if (announceDismissed) {
+      d.documentElement.classList.add("announce-closed");
+    } else {
+      var msgs = announceBar.querySelectorAll(".announce-msg");
+      if (msgs.length > 1 && !reduceMotion) {
+        var activeIdx = 0;
+        w.setInterval(function () {
+          msgs[activeIdx].classList.remove("is-active");
+          activeIdx = (activeIdx + 1) % msgs.length;
+          msgs[activeIdx].classList.add("is-active");
+        }, 4200);
+      }
+      var closeBtn = announceBar.querySelector(".announce-close");
+      if (closeBtn) {
+        closeBtn.addEventListener("click", function () {
+          d.documentElement.classList.add("announce-closed");
+          try { w.localStorage.setItem("vega-announce-dismissed", "1"); } catch (err) {}
+        });
+      }
+    }
+  }
+
   /* ---------- sticky header ---------- */
   var header = d.querySelector(".site-header");
   function onScrollHeader() {
@@ -165,7 +192,7 @@
   var moreBtn = d.querySelector("[data-show-more]");
   if (moreBtn) {
     moreBtn.addEventListener("click", function () {
-      d.querySelectorAll(".quote-card.hidden-q").forEach(function (q) {
+      d.querySelectorAll(".g-review.hidden-q").forEach(function (q) {
         q.classList.remove("hidden-q");
         q.style.display = "";
       });
@@ -248,6 +275,116 @@
     });
   } else {
     d.documentElement.dataset.cookieConsent = cookieChoice;
+  }
+
+  /* ---------- plan checkout modal ---------- */
+  var planCtas = d.querySelectorAll(".plan-cta");
+  if (planCtas.length) {
+    var checkoutModal = d.createElement("div");
+    checkoutModal.className = "checkout-modal";
+    checkoutModal.setAttribute("aria-hidden", "true");
+    checkoutModal.innerHTML =
+      '<div class="checkout-overlay" data-checkout-close></div>' +
+      '<div class="checkout-panel" role="dialog" aria-modal="true" aria-labelledby="checkout-title">' +
+        '<button class="checkout-close" type="button" data-checkout-close aria-label="Close">' +
+          '<svg viewBox="0 0 24 24" fill="none"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>' +
+        '</button>' +
+        '<div class="checkout-view checkout-view-recap">' +
+          '<p class="kicker">Confirm your plan</p>' +
+          '<h2 id="checkout-title" class="checkout-plan-name"></h2>' +
+          '<div class="checkout-price"><b></b><span></span></div>' +
+          '<p class="checkout-blurb"></p>' +
+          '<div class="checkout-fields">' +
+            '<div class="field"><label for="co-name">Full name</label><input id="co-name" type="text" autocomplete="name" placeholder="Full name"></div>' +
+            '<div class="field"><label for="co-email">Email</label><input id="co-email" type="email" autocomplete="email" placeholder="you@example.com"></div>' +
+          '</div>' +
+          '<button class="btn btn-primary checkout-confirm" type="button">Confirm plan' +
+            '<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>' +
+          '</button>' +
+          '<p class="form-note">No payment collected here — a coordinator confirms details and sets up billing by phone.</p>' +
+        '</div>' +
+        '<div class="checkout-view checkout-view-loading" hidden>' +
+          '<div class="checkout-spinner" aria-hidden="true"></div>' +
+          '<p>Setting up your plan…</p>' +
+        '</div>' +
+        '<div class="checkout-view checkout-view-success" hidden>' +
+          '<div class="ty-badge checkout-badge" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m4 12.5 5 5 11-12" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg></div>' +
+          '<h2 class="checkout-success-title"></h2>' +
+          '<p class="checkout-success-copy"></p>' +
+          '<button class="btn btn-ghost checkout-done" type="button">Done</button>' +
+        '</div>' +
+      '</div>';
+    d.body.appendChild(checkoutModal);
+
+    var coPlanName = checkoutModal.querySelector(".checkout-plan-name");
+    var coPriceB = checkoutModal.querySelector(".checkout-price b");
+    var coPriceSpan = checkoutModal.querySelector(".checkout-price span");
+    var coBlurb = checkoutModal.querySelector(".checkout-blurb");
+    var coRecap = checkoutModal.querySelector(".checkout-view-recap");
+    var coLoading = checkoutModal.querySelector(".checkout-view-loading");
+    var coSuccess = checkoutModal.querySelector(".checkout-view-success");
+    var coSuccessTitle = checkoutModal.querySelector(".checkout-success-title");
+    var coSuccessCopy = checkoutModal.querySelector(".checkout-success-copy");
+    var coConfirmBtn = checkoutModal.querySelector(".checkout-confirm");
+    var lastFocused = null;
+
+    function openCheckout(btn) {
+      var planEl = btn.closest(".plan");
+      var priceB = planEl ? planEl.querySelector(".price b") : null;
+      var priceSpan = planEl ? planEl.querySelector(".price-period") : null;
+      coPlanName.textContent = btn.dataset.plan || "Vega Shield";
+      coPriceB.textContent = priceB ? priceB.textContent : "";
+      coPriceSpan.textContent = priceSpan ? priceSpan.textContent : "";
+      coBlurb.textContent = btn.dataset.blurb || "";
+      coConfirmBtn.dataset.commercial = btn.dataset.commercial === "true" ? "true" : "false";
+      coRecap.hidden = false;
+      coLoading.hidden = true;
+      coSuccess.hidden = true;
+      lastFocused = d.activeElement;
+      checkoutModal.classList.add("is-open");
+      checkoutModal.setAttribute("aria-hidden", "false");
+      d.body.classList.add("modal-lock");
+      w.setTimeout(function () {
+        var first = checkoutModal.querySelector(".checkout-panel input, .checkout-panel button");
+        if (first) first.focus();
+      }, 50);
+    }
+
+    function closeCheckout() {
+      checkoutModal.classList.remove("is-open");
+      checkoutModal.setAttribute("aria-hidden", "true");
+      d.body.classList.remove("modal-lock");
+      if (lastFocused) lastFocused.focus();
+    }
+
+    planCtas.forEach(function (btn) {
+      btn.addEventListener("click", function () { openCheckout(btn); });
+    });
+
+    checkoutModal.querySelectorAll("[data-checkout-close]").forEach(function (el) {
+      el.addEventListener("click", closeCheckout);
+    });
+    checkoutModal.querySelector(".checkout-done").addEventListener("click", closeCheckout);
+
+    d.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && checkoutModal.classList.contains("is-open")) closeCheckout();
+    });
+
+    coConfirmBtn.addEventListener("click", function () {
+      coRecap.hidden = true;
+      coLoading.hidden = false;
+      w.setTimeout(function () {
+        coLoading.hidden = true;
+        coSuccess.hidden = false;
+        var isCommercial = coConfirmBtn.dataset.commercial === "true";
+        coSuccessTitle.textContent = isCommercial ? "Request received" : "You're all set";
+        coSuccessCopy.textContent = isCommercial
+          ? "A commercial account coordinator will call within one business day to scope your sites and set up billing."
+          : "A Vega Climate coordinator will call shortly to confirm billing and schedule your first tune-up.";
+        var doneBtn = checkoutModal.querySelector(".checkout-done");
+        if (doneBtn) doneBtn.focus();
+      }, 900);
+    });
   }
 
   /* ---------- current year ---------- */

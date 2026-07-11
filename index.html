@@ -7,7 +7,9 @@
 <meta name="description" content="Las Vegas HVAC engineered for the Mojave. 24/7 emergency AC repair, smart installations & Vega Shield maintenance across Las Vegas, Henderson & Summerlin. Call (702) 555-0148.">
 <link rel="canonical" href="https://philderev.github.io/hvac/">
 <meta name="theme-color" content="#05070d">
-<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" href="assets/icons/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="icon" href="assets/icons/favicon-16.png" type="image/png" sizes="16x16">
 <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
 <link rel="manifest" href="site.webmanifest">
 <meta property="og:type" content="website">
@@ -19,7 +21,7 @@
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
-<link rel="preload" href="assets/fonts/space-grotesk.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="assets/video/hero-poster.webp" as="image" fetchpriority="high">
 <link rel="stylesheet" href="assets/css/style.css">
 <script type="application/ld+json">
@@ -75,11 +77,25 @@
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
 
+<div class="announce-bar" role="region" aria-label="Current promotions">
+  <div class="announce-inner">
+    <div class="announce-track" aria-live="polite">
+      <p class="announce-msg is-active"><strong>Summer Special</strong> — $89 AC tune-up (reg. $149), book by July 31</p>
+      <p class="announce-msg">New customers save 15% on any repair this month</p>
+      <p class="announce-msg">0% APR financing available on new system installs</p>
+    </div>
+    <a class="announce-cta" href="contact/">Claim offer</a>
+    <button class="announce-close" type="button" aria-label="Dismiss announcement">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="m6 6 12 12M18 6 6 18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</div>
+
 <header class="site-header">
   <div class="wrap nav">
     <a class="brand" href="./">
-      <svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><defs><linearGradient id="lgx" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#38E1FF"/><stop offset=".55" stop-color="#4C7DFF"/><stop offset="1" stop-color="#FF8A3D"/></linearGradient></defs><path d="M32 3.4 55.5 17v27L32 57.6 8.5 44V17Z" stroke="url(#lgx)" stroke-width="3.2" stroke-linejoin="round"/><path d="M19.5 21.5 32 45" stroke="#38E1FF" stroke-width="5" stroke-linecap="round"/><path d="M44.5 21.5 32 45" stroke="#FF8A3D" stroke-width="5" stroke-linecap="round"/><path d="M32 12.2l1.7 4.1 4.1 1.7-4.1 1.7-1.7 4.1-1.7-4.1-4.1-1.7 4.1-1.7Z" fill="#EAF2FF"/></svg>
-      <span class="brand-name">VEGA<small>Climate · LV</small></span>
+      <img src="assets/icons/vega.png" alt="Vega Climate" class="brand-logo">
+
     </a>
     <nav aria-label="Main navigation" style="display:contents">
       <ul class="nav-links">
@@ -144,34 +160,23 @@
         </a>
       </div>
     </div>
-    <div class="scroll-hint" aria-hidden="true"></div>
   </section>
 
   <!-- ============ TRUST MARQUEE ============ -->
   <section class="trust" aria-label="Certifications and brands we service" style="padding:1.4rem 0">
     <div class="marquee">
-      <span class="marquee-item logo"><img src="assets/img/brands/carrier.svg" alt="Carrier" decoding="async"></span>
       <span class="marquee-item logo"><img src="assets/img/brands/trane.svg" alt="Trane" decoding="async"></span>
+      <span class="marquee-item logo"><img src="assets/img/brands/carrier.svg" alt="Carrier" decoding="async"></span>
       <span class="marquee-item logo"><img src="assets/img/brands/lennox.svg" alt="Lennox International" decoding="async"></span>
       <span class="marquee-item logo"><img src="assets/img/brands/daikin.svg" alt="Daikin" decoding="async"></span>
-      <span class="marquee-item logo"><img src="assets/img/brands/rheem.svg" alt="Rheem" decoding="async"></span>
-      <span class="marquee-item logo"><img src="assets/img/brands/goodman.svg" alt="Goodman Manufacturing" decoding="async"></span>
-      <span class="marquee-item logo"><img src="assets/img/brands/johnson.svg" alt="Johnson Controls" decoding="async"></span>
       <span class="marquee-item logo"><img src="assets/img/brands/mitsubishi.svg" alt="Mitsubishi Electric" decoding="async"></span>
-      <span class="marquee-item logo"><img src="assets/img/brands/amana.svg" alt="Amana" decoding="async"></span>
-      <span class="marquee-item logo"><img src="assets/img/brands/bosch.svg" alt="Bosch" decoding="async"></span>
-      <span class="marquee-item logo"><img src="assets/img/brands/lg.svg" alt="LG Electronics" decoding="async"></span>
-      <span class="marquee-item logo"><img src="assets/img/brands/carrier.svg" alt="Carrier" decoding="async"></span>
-      <span class="marquee-item logo"><img src="assets/img/brands/trane.svg" alt="Trane" decoding="async"></span>
-      <span class="marquee-item logo"><img src="assets/img/brands/lennox.svg" alt="Lennox International" decoding="async"></span>
-      <span class="marquee-item logo"><img src="assets/img/brands/daikin.svg" alt="Daikin" decoding="async"></span>
       <span class="marquee-item logo"><img src="assets/img/brands/rheem.svg" alt="Rheem" decoding="async"></span>
-      <span class="marquee-item logo"><img src="assets/img/brands/goodman.svg" alt="Goodman Manufacturing" decoding="async"></span>
-      <span class="marquee-item logo"><img src="assets/img/brands/johnson.svg" alt="Johnson Controls" decoding="async"></span>
-      <span class="marquee-item logo"><img src="assets/img/brands/mitsubishi.svg" alt="Mitsubishi Electric" decoding="async"></span>
-      <span class="marquee-item logo"><img src="assets/img/brands/amana.svg" alt="Amana" decoding="async"></span>
-      <span class="marquee-item logo"><img src="assets/img/brands/bosch.svg" alt="Bosch" decoding="async"></span>
-      <span class="marquee-item logo"><img src="assets/img/brands/lg.svg" alt="LG Electronics" decoding="async"></span>
+      <span class="marquee-item logo" aria-hidden="true"><img src="assets/img/brands/trane.svg" alt="" decoding="async"></span>
+      <span class="marquee-item logo" aria-hidden="true"><img src="assets/img/brands/carrier.svg" alt="" decoding="async"></span>
+      <span class="marquee-item logo" aria-hidden="true"><img src="assets/img/brands/lennox.svg" alt="" decoding="async"></span>
+      <span class="marquee-item logo" aria-hidden="true"><img src="assets/img/brands/daikin.svg" alt="" decoding="async"></span>
+      <span class="marquee-item logo" aria-hidden="true"><img src="assets/img/brands/mitsubishi.svg" alt="" decoding="async"></span>
+      <span class="marquee-item logo" aria-hidden="true"><img src="assets/img/brands/rheem.svg" alt="" decoding="async"></span>
     </div>
   </section>
 
@@ -225,42 +230,42 @@
       <div class="grid grid-3">
         <article class="card svc-card reveal">
           <span class="tag-247">24/7</span>
-          <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 2v20M4 6l16 12M20 6 4 18M12 2l-2.5 2.5M12 2l2.5 2.5M12 22l-2.5-2.5M12 22l2.5-2.5M4 6l.9 3.4M4 6l3.4-.9M20 18l-.9-3.4M20 18l-3.4.9M20 6l-3.4-.9M20 6l-.9 3.4M4 18l3.4.9M4 18l.9-3.4" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></div>
+          <img class="svc-card-img" src="assets/img/svc-repair.webp" alt="HVAC technician diagnosing an air-conditioning system" width="1200" height="1648" loading="lazy" decoding="async">
           <h3 class="h3">Emergency AC Repair</h3>
           <p>Compressor down at 2 AM in July? Our on-call techs carry parts for 90% of valley systems and restore cooling the same visit.</p>
           <a class="svc-link" href="services/ac-repair/">Repair details <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </article>
 
         <article class="card svc-card reveal d1">
-          <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="12" rx="2" stroke="currentColor" stroke-width="1.8"/><path d="M7 8h10M7 11h6M8 20h8m-4-4v4" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <img class="svc-card-img" src="assets/img/svc-install.webp" alt="Technician installing a modern air-conditioning system" width="1200" height="1648" loading="lazy" decoding="async">
           <h3 class="h3">AC Installation &amp; Replacement</h3>
           <p>High-SEER2 heat pumps and VRF systems sized with Manual J load calcs — not guesswork — plus NV Energy rebate paperwork done for you.</p>
           <a class="svc-link" href="services/ac-installation/">Install details <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </article>
 
         <article class="card svc-card reveal d2">
-          <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 22c4 0 7-2.9 7-6.8 0-2.8-1.7-4.6-3.2-6.4C14.6 7.4 13.5 5.7 13 3c-3.1 1.5-4.3 4-4.5 6.2-.1 1.1 0 2 .2 2.8-1-.5-1.8-1.3-2.3-2.4C5.2 11 5 12.6 5 13.9 5 18 8 22 12 22Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg></div>
+          <img class="svc-card-img" src="assets/img/svc-heat.webp" alt="Heating and furnace equipment being serviced" width="1200" height="1648" loading="lazy" decoding="async">
           <h3 class="h3">Heating &amp; Furnace</h3>
           <p>Desert nights drop fast. Furnace tune-ups, heat-pump conversions and safety inspections keep January mornings comfortable.</p>
           <a class="svc-link" href="services/heating/">Heating details <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </article>
 
         <article class="card svc-card reveal d3">
-          <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 4 6v6c0 4.5 3.2 7.6 8 9 4.8-1.4 8-4.5 8-9V6l-8-3Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m8.5 12 2.3 2.3L15.5 9.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <img class="svc-card-img" src="assets/img/svc-maint.webp" alt="HVAC technician performing preventative maintenance" width="1200" height="1648" loading="lazy" decoding="async">
           <h3 class="h3">Vega Shield Maintenance</h3>
           <p>Twice-yearly precision tune-ups, priority dispatch and member pricing. Desert dust is brutal — Shield members fail 72% less often.</p>
           <a class="svc-link" href="services/maintenance/">Plan details <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </article>
 
         <article class="card svc-card reveal d4">
-          <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M3 8h11a3 3 0 1 0-3-3M3 12h15a3 3 0 1 1-3 3M3 16h7a3 3 0 1 1-3 3" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <img class="svc-card-img" src="assets/img/svc-air.webp" alt="Residential air ducts and indoor air-quality equipment" width="1200" height="1648" loading="lazy" decoding="async">
           <h3 class="h3">Air Quality &amp; Ducts</h3>
           <p>Duct sealing, HEPA filtration and UV purification that cut valley dust and allergens — with before/after particle counts to prove it.</p>
           <a class="svc-link" href="services/air-quality/">Air quality details <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
         </article>
 
         <article class="card svc-card reveal d5">
-          <div class="svc-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="4" stroke="currentColor" stroke-width="1.8"/><circle cx="12" cy="12" r="3.2" stroke="currentColor" stroke-width="1.8"/><path d="M12 5.5V4m0 16v-1.5M18.5 12H20M4 12h1.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></div>
+          <img class="svc-card-img" src="assets/img/svc-thermo.webp" alt="Smart thermostat controlling a home climate system" width="1200" height="1648" loading="lazy" decoding="async">
           <h3 class="h3">Smart Climate Automation</h3>
           <p>Zoned smart thermostats and sensors that pre-cool before peak rates and trim NV Energy bills by up to 23% — installed and tuned.</p>
           <a class="svc-link" href="services/smart-thermostats/">Automation details <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
@@ -414,7 +419,7 @@
           <h3 class="h3">Shield Basic</h3>
           <p>Solid protection for condos and single-system homes.</p>
           <div class="price"><b data-monthly="19" data-annual="190">$19</b><span class="price-period">/month</span></div>
-          <a class="btn btn-ghost" href="contact/">Start with Basic</a>
+          <button class="btn btn-ghost plan-cta" type="button" data-plan="Shield Basic" data-blurb="Solid protection for condos and single-system homes.">Start with Basic</button>
           <ul>
             <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.5 5 9l5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>1 precision tune-up / year</li>
             <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.5 5 9l5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>15% off all repairs</li>
@@ -428,7 +433,7 @@
           <h3 class="h3">Shield Pro</h3>
           <p>Full coverage for family homes that can't afford downtime.</p>
           <div class="price"><b data-monthly="49" data-annual="490">$49</b><span class="price-period">/month</span></div>
-          <a class="btn btn-primary" href="contact/">Start with Pro</a>
+          <button class="btn btn-primary plan-cta" type="button" data-plan="Shield Pro" data-blurb="Full coverage for family homes that can't afford downtime.">Start with Pro</button>
           <ul>
             <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.5 5 9l5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>2 precision tune-ups / year</li>
             <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.5 5 9l5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>25% off repairs + priority 24/7 dispatch</li>
@@ -441,7 +446,7 @@
           <h3 class="h3">Shield Commercial</h3>
           <p>Multi-unit and light-commercial coverage with SLA response.</p>
           <div class="price"><b data-monthly="149" data-annual="1490">$149</b><span class="price-period">/month</span></div>
-          <a class="btn btn-ghost" href="contact/">Talk to sales</a>
+          <button class="btn btn-ghost plan-cta" type="button" data-plan="Shield Commercial" data-blurb="Multi-unit and light-commercial coverage with SLA response." data-commercial="true">Talk to sales</button>
           <ul>
             <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.5 5 9l5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Quarterly inspections, up to 5 units</li>
             <li><span class="tick" aria-hidden="true"><svg viewBox="0 0 12 12" fill="none"><path d="M2 6.5 5 9l5-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></span>4-hour response SLA</li>
@@ -465,40 +470,82 @@
       </div>
 
       <div class="grid grid-3">
-        <article class="card quote-card reveal">
-          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg></div>
-          <blockquote>"AC died at 8 PM on a 112° Friday. Tech was here by 8:40, showed me the failed capacitor on camera, flat price, cold air by 9:30. This is how every company should operate."</blockquote>
-          <div class="quote-who"><span class="avatar" aria-hidden="true">MR</span><div><b>Marcus Reyes</b><span>Homeowner · Henderson</span></div></div>
+        <article class="g-review reveal">
+          <div class="g-review-head">
+            <span class="g-review-avatar" style="background:#1a73e8" aria-hidden="true">M</span>
+            <div><b>Marcus Reyes</b><span class="g-review-time">2 weeks ago</span></div>
+          </div>
+          <div class="g-review-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg></div>
+          <p class="g-review-text">AC died at 8 PM on a 112° Friday. Tech was here by 8:40, showed me the failed capacitor on camera, flat price, cold air by 9:30. This is how every company should operate.</p>
+          <div class="g-review-foot">
+            <span class="g-review-posted">Posted on Google</span>
+            <a class="g-review-link" href="https://www.google.com/search?q=Vega+Climate+Las+Vegas+reviews" target="_blank" rel="noopener">Read on Google</a>
+          </div>
         </article>
 
-        <article class="card quote-card reveal d1">
-          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg></div>
-          <blockquote>"Replaced our 20-year-old unit with a heat pump. They handled the NV Energy rebate, pulled permits, and our summer bill dropped $140/month. The digital report is next-level."</blockquote>
-          <div class="quote-who"><span class="avatar alt" aria-hidden="true">SC</span><div><b>Sandra Chen</b><span>Homeowner · Summerlin</span></div></div>
+        <article class="g-review reveal d1">
+          <div class="g-review-head">
+            <span class="g-review-avatar" style="background:#34a853" aria-hidden="true">S</span>
+            <div><b>Sandra Chen</b><span class="g-review-time">3 weeks ago</span></div>
+          </div>
+          <div class="g-review-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg></div>
+          <p class="g-review-text">Replaced our 20-year-old unit with a heat pump. They handled the NV Energy rebate, pulled permits, and our summer bill dropped $140/month. The digital report is next-level.</p>
+          <div class="g-review-foot">
+            <span class="g-review-posted">Posted on Google</span>
+            <a class="g-review-link" href="https://www.google.com/search?q=Vega+Climate+Las+Vegas+reviews" target="_blank" rel="noopener">Read on Google</a>
+          </div>
         </article>
 
-        <article class="card quote-card reveal d2">
-          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg></div>
-          <blockquote>"We run three restaurants. Vega's commercial plan means a real human answers at 5 AM and a tech is on the roof before lunch rush. Haven't lost a single service day in two years."</blockquote>
-          <div class="quote-who"><span class="avatar" aria-hidden="true">DP</span><div><b>Dev Patel</b><span>Restaurant group · Las Vegas</span></div></div>
+        <article class="g-review reveal d2">
+          <div class="g-review-head">
+            <span class="g-review-avatar" style="background:#ea4335" aria-hidden="true">D</span>
+            <div><b>Dev Patel</b><span class="g-review-time">1 month ago</span></div>
+          </div>
+          <div class="g-review-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg></div>
+          <p class="g-review-text">We run three restaurants. Vega's commercial plan means a real human answers at 5 AM and a tech is on the roof before lunch rush. Haven't lost a single service day in two years.</p>
+          <div class="g-review-foot">
+            <span class="g-review-posted">Posted on Google</span>
+            <a class="g-review-link" href="https://www.google.com/search?q=Vega+Climate+Las+Vegas+reviews" target="_blank" rel="noopener">Read on Google</a>
+          </div>
         </article>
 
-        <article class="card quote-card reveal hidden-q" style="display:none">
-          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg></div>
-          <blockquote>"Duct sealing and a HEPA system cut the dust in our Centennial Hills house dramatically — they showed particle counts before and after. My allergies noticed the difference in a week."</blockquote>
-          <div class="quote-who"><span class="avatar alt" aria-hidden="true">AK</span><div><b>Aisha Karim</b><span>Homeowner · Centennial Hills</span></div></div>
+        <article class="g-review reveal hidden-q" style="display:none">
+          <div class="g-review-head">
+            <span class="g-review-avatar" style="background:#a142f4" aria-hidden="true">A</span>
+            <div><b>Aisha Karim</b><span class="g-review-time">1 month ago</span></div>
+          </div>
+          <div class="g-review-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg></div>
+          <p class="g-review-text">Duct sealing and a HEPA system cut the dust in our Centennial Hills house dramatically — they showed particle counts before and after. My allergies noticed the difference in a week.</p>
+          <div class="g-review-foot">
+            <span class="g-review-posted">Posted on Google</span>
+            <a class="g-review-link" href="https://www.google.com/search?q=Vega+Climate+Las+Vegas+reviews" target="_blank" rel="noopener">Read on Google</a>
+          </div>
         </article>
 
-        <article class="card quote-card reveal hidden-q" style="display:none">
-          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg></div>
-          <blockquote>"Shield Pro member for three years. They text before arrival, wear shoe covers, and the twice-a-year tune-ups have kept our original unit alive well past its expiry date."</blockquote>
-          <div class="quote-who"><span class="avatar" aria-hidden="true">TN</span><div><b>Tom Nguyen</b><span>Homeowner · Spring Valley</span></div></div>
+        <article class="g-review reveal hidden-q" style="display:none">
+          <div class="g-review-head">
+            <span class="g-review-avatar" style="background:#ff6d00" aria-hidden="true">T</span>
+            <div><b>Tom Nguyen</b><span class="g-review-time">2 months ago</span></div>
+          </div>
+          <div class="g-review-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg></div>
+          <p class="g-review-text">Shield Pro member for three years. They text before arrival, wear shoe covers, and the twice-a-year tune-ups have kept our original unit alive well past its expiry date.</p>
+          <div class="g-review-foot">
+            <span class="g-review-posted">Posted on Google</span>
+            <a class="g-review-link" href="https://www.google.com/search?q=Vega+Climate+Las+Vegas+reviews" target="_blank" rel="noopener">Read on Google</a>
+          </div>
         </article>
 
-        <article class="card quote-card reveal hidden-q" style="display:none">
-          <div class="stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg></div>
-          <blockquote>"Got three quotes for a full system replacement. Vega wasn't the cheapest, but they were the only ones who did a real load calculation. The system is whisper-quiet and perfectly sized."</blockquote>
-          <div class="quote-who"><span class="avatar alt" aria-hidden="true">LB</span><div><b>Lena Brooks</b><span>Homeowner · Boulder City</span></div></div>
+        <article class="g-review reveal hidden-q" style="display:none">
+          <div class="g-review-head">
+            <span class="g-review-avatar" style="background:#009688" aria-hidden="true">L</span>
+            <div><b>Lena Brooks</b><span class="g-review-time">3 months ago</span></div>
+          </div>
+          <div class="g-review-stars" role="img" aria-label="5 out of 5 stars"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m12 2 3 6.6 7 .8-5.2 4.8L18.2 21 12 17.4 5.8 21l1.4-6.8L2 9.4l7-.8Z"/></svg></div>
+          <p class="g-review-text">Got three quotes for a full system replacement. Vega wasn't the cheapest, but they were the only ones who did a real load calculation. The system is whisper-quiet and perfectly sized.</p>
+          <div class="g-review-foot">
+            <span class="g-review-posted">Posted on Google</span>
+            <a class="g-review-link" href="https://www.google.com/search?q=Vega+Climate+Las+Vegas+reviews" target="_blank" rel="noopener">Read on Google</a>
+          </div>
         </article>
       </div>
 
@@ -565,8 +612,8 @@
         </div>
         <form class="home-quote-form" data-demo action="thank-you/" method="get" novalidate>
           <div class="form-grid">
-            <div class="field"><label for="hq-name">Your name</label><input id="hq-name" name="name" type="text" autocomplete="name" required placeholder="Jordan Alvarez"></div>
-            <div class="field"><label for="hq-phone">Phone number</label><input id="hq-phone" name="phone" type="tel" autocomplete="tel" required placeholder="(702) 555-0123"></div>
+            <div class="field"><label for="hq-name">Your name</label><input id="hq-name" name="name" type="text" autocomplete="name" required placeholder="Full name"></div>
+            <div class="field"><label for="hq-phone">Phone number</label><input id="hq-phone" name="phone" type="tel" autocomplete="tel" required placeholder="(702) 000-0000"></div>
             <div class="field"><label for="hq-service">Service needed</label>
               <select id="hq-service" name="service">
                 <option>Emergency AC repair</option><option>AC installation / replacement</option><option>Heating &amp; furnace</option><option>Preventive maintenance</option><option>Air quality &amp; ducts</option><option>Smart climate automation</option><option>Something else</option>
@@ -624,8 +671,8 @@
     <div class="footer-grid">
       <div class="footer-about">
         <a class="brand" href="./">
-          <svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><defs><linearGradient id="lgf" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#38E1FF"/><stop offset=".55" stop-color="#4C7DFF"/><stop offset="1" stop-color="#FF8A3D"/></linearGradient></defs><path d="M32 3.4 55.5 17v27L32 57.6 8.5 44V17Z" stroke="url(#lgf)" stroke-width="3.2" stroke-linejoin="round"/><path d="M19.5 21.5 32 45" stroke="#38E1FF" stroke-width="5" stroke-linecap="round"/><path d="M44.5 21.5 32 45" stroke="#FF8A3D" stroke-width="5" stroke-linecap="round"/><path d="M32 12.2l1.7 4.1 4.1 1.7-4.1 1.7-1.7 4.1-1.7-4.1-4.1-1.7 4.1-1.7Z" fill="#EAF2FF"/></svg>
-          <span class="brand-name">VEGA<small>Climate · LV</small></span>
+          <img src="assets/icons/vega.png" alt="Vega Climate" class="brand-logo">
+
         </a>
         <p>Futuristic HVAC for the Las Vegas valley. Licensed, bonded and insured — NV #C21-0087421.</p>
         <div class="socials">
@@ -667,7 +714,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span data-year>2026</span> Vega Climate Systems LLC. All rights reserved. Fictional demo business.</span>
+      <span>© <span data-year>2026</span> Vega Climate Systems LLC. All rights reserved.</span>
       <nav class="footer-legal" aria-label="Legal"><a href="privacy/">Privacy Policy</a><a href="terms/">Terms of Service</a></nav>
     </div>
   </div>
