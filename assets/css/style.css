@@ -109,7 +109,7 @@ h1,h2,h3,h4{font-weight:800;line-height:1.05;letter-spacing:-.01em;text-wrap:bal
 
 .section-head{margin-bottom:clamp(2.2rem,5vw,3.6rem)}
 .section-head.split{display:flex;flex-wrap:wrap;gap:1.5rem;align-items:flex-end;justify-content:space-between}
-.section-head .lead{border-left:2px solid var(--cyan);padding-left:1rem}
+.lead{border-left:2px solid var(--cyan);padding-left:1rem}
 
 /* ---------- buttons ---------- */
 .btn{
@@ -885,7 +885,6 @@ body.modal-lock{overflow:hidden}
   .form-grid{grid-template-columns:1fr}
   .home-quote-submit{align-items:stretch;flex-direction:column}
   .home-quote-submit .btn{justify-content:center}
-  .section-head .lead{border-left:0;padding-left:0}
   .contact-console{right:1rem;bottom:1rem}
   .contact-console-toggle{width:58px;padding:0}
   .contact-toggle-label{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
