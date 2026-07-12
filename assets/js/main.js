@@ -34,7 +34,7 @@
     heroForm.noValidate = true;
     var policyRoot = isHome ? "" : (isService ? "../../" : "../");
     heroForm.innerHTML =
-      '<div class="hero-form-intro"><p class="kicker">Request service</p><h2>Get your<br>free quote</h2><p class="lead">Tell us what\'s happening. We\'ll confirm your appointment window by text within 15 minutes during business hours.</p></div>' +
+      '<div class="hero-form-intro"><p class="kicker">Request service</p><h2>Get your free quote</h2></div>' +
       '<div class="form-grid">' +
         '<div class="field"><label for="hero-name">Full name</label><input id="hero-name" name="name" type="text" autocomplete="name" required placeholder="Full name"></div>' +
         '<div class="field"><label for="hero-phone">Phone</label><input id="hero-phone" name="phone" type="tel" autocomplete="tel" required placeholder="(702) 000-0000"></div>' +
@@ -44,7 +44,8 @@
         '<div class="field"><label for="hero-when">When?</label><select id="hero-when" name="urgency"><option>As soon as possible</option><option>Within a few days</option><option>Planning ahead</option></select></div>' +
         '<div class="field full"><label for="hero-message">What\'s going on?</label><textarea id="hero-message" name="message" rows="3" placeholder="AC blows warm air upstairs; unit is about 8 years old..."></textarea></div>' +
       '</div>' +
-      '<label class="consent"><input type="checkbox" name="sms_consent" required><span>I consent to receive SMS notifications, alerts &amp; occasional marketing communication from Vega Climate. Message frequency varies. Message &amp; data rates may apply. Reply STOP to unsubscribe at any time.</span></label>' +
+      '<label class="consent"><input type="checkbox" name="sms_service_consent" required><span>I consent to receive non-marketing text messages from Sage &amp; Stone regarding my site walk request, appointment reminders, and project updates. Message frequency varies. Message and data rates may apply. Reply HELP for assistance or STOP to opt out.</span></label>' +
+      '<label class="consent"><input type="checkbox" name="sms_marketing_consent"><span>I consent to receive marketing text messages from Sage &amp; Stone regarding seasonal offers, promotions, and landscaping services. Message frequency varies. Message and data rates may apply. Reply HELP for assistance or STOP to opt out.</span></label>' +
       '<div class="form-submit-center"><button class="btn btn-primary" type="submit">Send request<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>' +
       '<p class="form-legal-links"><a href="' + policyRoot + 'privacy/">Privacy Policy</a> <span aria-hidden="true">|</span> <a href="' + policyRoot + 'terms/">Terms of Service</a></p>' +
       '<p class="form-success" role="status">Request received! A dispatcher will text your confirmation shortly. (Demo site - form submissions are simulated.)</p>';
@@ -272,9 +273,6 @@
   contactWidget.className = "contact-console";
   contactWidget.innerHTML =
     '<div class="contact-console-panel" id="contact-console-panel" aria-hidden="true">' +
-      '<div class="contact-console-head">' +
-        '<div><h2>Need a climate fix?</h2><p>Talk directly with our Las Vegas crew.</p></div>' +
-      '</div>' +
       '<div class="contact-console-actions">' +
         '<a href="tel:+17025550148"><span class="contact-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/></svg></span><span><strong>Call dispatch</strong><small>(702) 555-0148</small></span><span class="contact-arrow" aria-hidden="true">&#8599;</span></a>' +
         '<a href="sms:+17025550148"><span class="contact-action-icon" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M5 5h14v11H9l-4 3V5Z" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/><path d="M9 9h6M9 12h4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></span><span><strong>Send a text</strong><small>Fastest for quick questions</small></span><span class="contact-arrow" aria-hidden="true">&#8599;</span></a>' +

@@ -99,7 +99,6 @@
       <div class="reveal-l">
         <p class="kicker" id="form-h">Request service</p>
         <h2 class="h2">Get your free quote</h2>
-        <p class="lead" style="margin-bottom:2rem">Tell us what's happening we'll confirm your appointment window by text within 15 minutes during business hours.</p>
         <form data-demo action="../thank-you/" method="get" novalidate>
           <div class="form-grid">
             <div class="field"><label for="f-name">Full name</label><input id="f-name" name="name" type="text" autocomplete="name" required placeholder="Full name"></div>
@@ -127,8 +126,12 @@
             <div class="field full"><label for="f-msg">What's going on?</label><textarea id="f-msg" name="message" placeholder="AC blows warm air upstairs; unit is about 8 years old…"></textarea></div>
           </div>
           <label class="consent">
-            <input type="checkbox" name="sms_consent" required>
-            <span>I consent to receive SMS notifications, alerts &amp; occasional marketing communication from Vega Climate. Message frequency varies. Message &amp; data rates may apply. Reply STOP to unsubscribe at any time.</span>
+            <input type="checkbox" name="sms_service_consent" required>
+            <span>I consent to receive non-marketing text messages from Sage &amp; Stone regarding my site walk request, appointment reminders, and project updates. Message frequency varies. Message and data rates may apply. Reply HELP for assistance or STOP to opt out.</span>
+          </label>
+          <label class="consent">
+            <input type="checkbox" name="sms_marketing_consent">
+            <span>I consent to receive marketing text messages from Sage &amp; Stone regarding seasonal offers, promotions, and landscaping services. Message frequency varies. Message and data rates may apply. Reply HELP for assistance or STOP to opt out.</span>
           </label>
           <div class="form-submit-center">
             <button class="btn btn-primary" type="submit">Send request
