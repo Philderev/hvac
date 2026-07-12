@@ -273,7 +273,6 @@
   contactWidget.innerHTML =
     '<div class="contact-console-panel" id="contact-console-panel" aria-hidden="true">' +
       '<div class="contact-console-head">' +
-        '<span class="contact-console-mark" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none"><defs><linearGradient id="contactLogoHex" x1="8" y1="6" x2="56" y2="58" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#38E1FF"/><stop offset=".55" stop-color="#4C7DFF"/><stop offset="1" stop-color="#FF8A3D"/></linearGradient><linearGradient id="contactLogoCold" x1="18" y1="20" x2="32" y2="46" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#7BEBFF"/><stop offset="1" stop-color="#38E1FF"/></linearGradient><linearGradient id="contactLogoWarm" x1="46" y1="20" x2="32" y2="46" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#FFB067"/><stop offset="1" stop-color="#FF8A3D"/></linearGradient></defs><path d="M32 3.4 55.5 17v27L32 57.6 8.5 44V17Z" stroke="url(#contactLogoHex)" stroke-width="3.2" stroke-linejoin="round"/><path d="M19.5 21.5 32 45" stroke="url(#contactLogoCold)" stroke-width="5" stroke-linecap="round"/><path d="M44.5 21.5 32 45" stroke="url(#contactLogoWarm)" stroke-width="5" stroke-linecap="round"/><path d="M32 12.2l1.7 4.1 4.1 1.7-4.1 1.7-1.7 4.1-1.7-4.1-4.1-1.7 4.1-1.7Z" fill="#EAF2FF"/></svg></span>' +
         '<div><h2>Need a climate fix?</h2><p>Talk directly with our Las Vegas crew.</p></div>' +
       '</div>' +
       '<div class="contact-console-actions">' +
