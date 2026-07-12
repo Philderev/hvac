@@ -1,8 +1,61 @@
-/* Vega Climate — interactions (vanilla, ~4KB) */
+/* Vega Climate - interactions (vanilla, ~4KB) */
 (function () {
   "use strict";
   var d = document, w = window;
   var reduceMotion = w.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+  /* Keep punctuation consistent throughout page copy and metadata. */
+  var dashWalker = d.createTreeWalker(d.documentElement, NodeFilter.SHOW_TEXT);
+  var dashNode;
+  while ((dashNode = dashWalker.nextNode())) {
+    if (dashNode.nodeValue.indexOf("\u2014") !== -1 || dashNode.nodeValue.indexOf("\u2013") !== -1) {
+      dashNode.nodeValue = dashNode.nodeValue.replace(/[\u2013\u2014]/g, "-");
+    }
+  }
+  d.querySelectorAll("[title],[content],[aria-label],[placeholder]").forEach(function (el) {
+    ["title", "content", "aria-label", "placeholder"].forEach(function (attr) {
+      if (el.hasAttribute(attr)) el.setAttribute(attr, el.getAttribute(attr).replace(/[\u2013\u2014]/g, "-"));
+    });
+  });
+
+  /* Shared compact booking form for requested hero sections. */
+  var path = w.location.pathname.replace(/\\/g, "/");
+  var isHome = !!d.querySelector(".hero");
+  var isService = /\/services\/[^/]+\/?(?:index\.html)?$/.test(path);
+  var isArea = /\/service-areas\/?(?:index\.html)?$/.test(path);
+  var hero = d.querySelector(isHome ? ".hero .wrap" : ".page-hero .wrap");
+  if (hero && (isHome || isService || isArea)) {
+    var action = isHome ? "thank-you/" : (isService ? "../../thank-you/" : "../thank-you/");
+    var heroForm = d.createElement("form");
+    heroForm.className = "home-quote-form hero-quick-form";
+    heroForm.setAttribute("data-demo", "");
+    heroForm.action = action;
+    heroForm.method = "get";
+    heroForm.noValidate = true;
+    var policyRoot = isHome ? "" : (isService ? "../../" : "../");
+    heroForm.innerHTML =
+      '<div class="hero-form-intro"><p class="kicker">Request service</p><h2>Get your<br>free quote</h2><p class="lead">Tell us what\'s happening - we\'ll confirm your appointment window by text within 15 minutes during business hours.</p></div>' +
+      '<div class="form-grid">' +
+        '<div class="field"><label for="hero-name">Full name</label><input id="hero-name" name="name" type="text" autocomplete="name" required placeholder="Full name"></div>' +
+        '<div class="field"><label for="hero-phone">Phone</label><input id="hero-phone" name="phone" type="tel" autocomplete="tel" required placeholder="(702) 000-0000"></div>' +
+        '<div class="field"><label for="hero-email">Email</label><input id="hero-email" name="email" type="email" autocomplete="email" placeholder="you@example.com"></div>' +
+        '<div class="field"><label for="hero-zip">ZIP code</label><input id="hero-zip" name="zip" inputmode="numeric" autocomplete="postal-code" placeholder="89103"></div>' +
+        '<div class="field"><label for="hero-service">Service needed</label><select id="hero-service" name="service"><option>Emergency AC repair</option><option>AC installation / replacement</option><option>Heating &amp; furnace</option><option>Preventive maintenance</option><option>Air quality &amp; ducts</option><option>Smart climate automation</option><option>Something else</option></select></div>' +
+        '<div class="field"><label for="hero-when">When?</label><select id="hero-when" name="urgency"><option>As soon as possible</option><option>Within a few days</option><option>Planning ahead</option></select></div>' +
+        '<div class="field full"><label for="hero-message">What\'s going on?</label><textarea id="hero-message" name="message" rows="3" placeholder="AC blows warm air upstairs; unit is about 8 years old..."></textarea></div>' +
+      '</div>' +
+      '<label class="consent"><input type="checkbox" name="sms_consent" required><span>I consent to receive SMS notifications, alerts &amp; occasional marketing communication from Vega Climate. Message frequency varies. Message &amp; data rates may apply. Reply STOP to unsubscribe at any time.</span></label>' +
+      '<div class="form-submit-center"><button class="btn btn-primary" type="submit">Send request<svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div>' +
+      '<p class="form-legal-links"><a href="' + policyRoot + 'privacy/">Privacy Policy</a> <span aria-hidden="true">|</span> <a href="' + policyRoot + 'terms/">Terms of Service</a></p>' +
+      '<p class="form-success" role="status">Request received! A dispatcher will text your confirmation shortly. (Demo site - form submissions are simulated.)</p>';
+    if (!isHome) {
+      var heroCopy = d.createElement("div");
+      heroCopy.className = "service-hero-content";
+      while (hero.firstChild) heroCopy.appendChild(hero.firstChild);
+      hero.appendChild(heroCopy);
+    }
+    hero.appendChild(heroForm);
+  }
 
   /* ---------- announcement bar ---------- */
   var announceBar = d.querySelector(".announce-bar");
