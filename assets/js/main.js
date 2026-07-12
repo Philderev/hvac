@@ -34,7 +34,7 @@
     heroForm.noValidate = true;
     var policyRoot = isHome ? "" : (isService ? "../../" : "../");
     heroForm.innerHTML =
-      '<div class="hero-form-intro"><p class="kicker">Request service</p><h2>Get your<br>free quote</h2><p class="lead">Tell us what\'s happening - we\'ll confirm your appointment window by text within 15 minutes during business hours.</p></div>' +
+      '<div class="hero-form-intro"><p class="kicker">Request service</p><h2>Get your<br>free quote</h2><p class="lead">Tell us what\'s happening. We\'ll confirm your appointment window by text within 15 minutes during business hours.</p></div>' +
       '<div class="form-grid">' +
         '<div class="field"><label for="hero-name">Full name</label><input id="hero-name" name="name" type="text" autocomplete="name" required placeholder="Full name"></div>' +
         '<div class="field"><label for="hero-phone">Phone</label><input id="hero-phone" name="phone" type="tel" autocomplete="tel" required placeholder="(702) 000-0000"></div>' +
